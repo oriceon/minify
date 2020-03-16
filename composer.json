@@ -1,0 +1,42 @@
+{
+  "name": "oriceon/minify",
+  "keywords": ["minify", "laravel"],
+  "description": "A package for minifying styles and javascript for laravel 6+",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Da Costa Alcindo",
+      "email": "alcindo.dacosta@devfactory.ch"
+    },
+    {
+      "name": "Valentin Ivascu"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "tedivm/jshrink": "~1.0",
+    "natxet/CssMin": "3.*",
+    "illuminate/filesystem": "^6|^7",
+    "illuminate/support": "^6|^7"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "2.0.0",
+    "mikey179/vfsStream": "1.6.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Oriceon\\Minify\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Oriceon\\Minify\\MinifyServiceProvider"
+      ],
+      "aliases": {
+        "Minify": "Oriceon\\Minify\\Facades\\Minify"
+      }
+    }
+  },
+  "minimum-stability": "dev"
+}
