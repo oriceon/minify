@@ -62,14 +62,14 @@ class StyleSheet extends BaseProvider implements MinifyInterface
                 ]]);
 
                 $http_response_header = [false];
-
+                
                 if (strpos($http_response_header[0], '200') === false)
                 {
                     throw new FileNotExistException('File "' . $file . '" does not exist');
                 }
             }
 
-            $contents = $this->urlCorrection($file);
+            $contents = file_get_contents($file);
             $this->appended .= $contents . "\n";
         }
     }
