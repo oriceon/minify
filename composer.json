@@ -21,7 +21,7 @@
   },
   "require-dev": {
     "phpspec/phpspec": "2.0.0",
-    "mikey179/vfsStream": "1.6.*"
+    "mikey179/vfsstream": "1.6.*"
   },
   "autoload": {
     "psr-4": {
