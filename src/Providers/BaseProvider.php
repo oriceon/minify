@@ -153,9 +153,9 @@ abstract class BaseProvider implements Countable
     /**
     * @return int
     */
-    public function count()
+    public function count(): int
     {
-        return count($this->files);
+        return (is_countable($this->files) ? count($this->files) : 0);
     }
 
     /**
